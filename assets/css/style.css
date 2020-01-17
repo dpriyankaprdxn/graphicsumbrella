@@ -173,6 +173,11 @@ h5 {
   text-transform: uppercase;
 }
 
+h6 {
+  font-size: 12px;
+  text-transform: uppercase;  
+} 
+
 h5:after {
   width: 62%;
   content: '';
@@ -243,6 +248,48 @@ h3 {
 
 /*business theme section end*/
 
+/*portfolio styling started*/
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio li { 
+  width: 48%;
+  margin-bottom: 25px;
+}
+
+.portfolio figure{ 
+  width: 48%;
+  display: inline-block; 
+  float: left; 
+}
+
+.portfolio-text {
+  padding: 2px 2%;
+  display: inline-block;
+  width: 48%;
+  float: right;
+}
+
+.portfolio-text a {
+  padding: 2px 2%;
+  margin: 8px 0px;
+  color: #fff;
+  background-color: #8db53e;
+  font-size: 10px;
+}
+
+.portfolio-text p { font-size: 10px; }
+
+.portfolio-text p span { font-weight: bold; }
+/*portfolio styling end*/
+
+
+.advertisers-list { 
+  display: flex;
+}
 /*=================================
   main styling ends here
 =================================*/
