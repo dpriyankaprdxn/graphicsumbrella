@@ -108,7 +108,7 @@ li {
   margin: 0 auto;
 }
 
-.container { background-color: #fdfdfd; }
+.container { background-color: #f9f9f9; }
 /*=================================
   Header styling starts here
 =================================*/
@@ -119,6 +119,8 @@ li {
 header .wrapper { 
   padding-top: 15px;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
 }
@@ -153,12 +155,93 @@ nav a{
   main styling starts here
 =================================*/
 
+p { color: #666; }
+
+h3 span,
+h5 span { color: #a0c63f; }
+
+h4 { 
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+h5 {
+  color: #7e7e7e;
+  margin: 0px 0px 32px 2%;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+h5:after {
+  width: 62%;
+  content: '';
+  margin: -12px 0px 0px 38%;
+  border-top: 2px dashed #f1f1f1;
+  display: inherit;
+}
+
+/*banner styling starts here*/
+
+.banner { background-color: #a0c63f; }
+
+.banner-img { position: relative; }
+
+.banner li:not(:first-child) { display: none }
+
+h2 {
+  width: 42%;
+  color: #fff;
+  position: absolute;
+  top: 53px;
+  right: 3%;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.previous {
+  float: left;
+}
+
+/*banner styleing ends here*/
+
+/*business theme section start*/
+
+.business-theme { margin-top: 30px; }
+
+h3 { 
+  padding-bottom: 30px;
+  margin: 0px 0px 35px 2%;
+  border-bottom: 2px dashed #f1f1f1;
+  font-size:  25px;
+  text-transform: uppercase; 
+}
+
+.services { 
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.services li { width: 22%; }
+
+.services img {
+  width: 60%;
+  margin-bottom: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 20px solid #f1f1f1;
+}
+
+.services span { font-size: 12px; }
 
 
-
-
-
-
+/*business theme section end*/
 
 /*=================================
   main styling ends here
