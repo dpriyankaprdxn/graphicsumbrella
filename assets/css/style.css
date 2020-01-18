@@ -148,6 +148,22 @@ nav a{
   font-size: 10px;
   text-transform: uppercase;
 }
+
+.toggle { 
+  width: 10%;
+  padding: 2px 2%;
+  border:1px solid #a0c63f;
+  display: none;
+  background:  #a0c63f;
+}
+
+.toggle span { 
+  padding: 4px 1%;
+  margin: 7px 2px;
+  display: block;
+  background: #ccc;
+}
+
 /*=================================
   Header styling ends here
 =================================*/  
@@ -461,6 +477,16 @@ nav li {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px){
 
+h2 { font-size: 18px; }  
+
+h3 { font-size: 23px; }  
+
+h4 { font-size: 22px; }
+
+h5 {font-size: 18px; }
+
+h6 { font-size: 14px; } 
+
 p { font-size: 12px; }
 
 .wrapper { width: 70%; }
@@ -475,13 +501,13 @@ p { font-size: 12px; }
 .portfolio li { width: 90%; }
 
 .advertisers-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advertisers-list li {
-    width: 22%;
-    margin: 0px 1% 5px 0px;
+  width: 22%;
+  margin: 0px 1% 5px 0px;
 }
 
 .next { right: -10%; }
@@ -489,8 +515,8 @@ p { font-size: 12px; }
 .previous { left:-10%; }
 
 .footerOne div {
-    width: 50%;
-    margin-bottom: 10px;
+  width: 50%;
+  margin-bottom: 10px;
 }
 
 }
@@ -517,5 +543,54 @@ p { font-size: 12px; }
 }
 
 .portfolio-text p{ width: 90%; }
+
+}
+
+
+@media only screen and (max-width: 540px){
+
+
+h2{
+  width: 60%;
+  top: 20%;
+  font-size: 14px;
+}
+.advertisers-list{ justify-content: space-around; }
+
+.advertisers-list li {
+  width: 38%;
+}
+
+.toggle { 
+  display:block;
+  float: right;
+}
+
+.toggle:hover + nav{
+display: block; 
+}
+
+nav { 
+  display: none;
+  width: 100%;
+  margin: 60px auto 0px auto;
+}
+
+nav li {
+margin: 0 auto; 
+  display: block;
+  width: 100%;
+}
+
+nav a {
+  display:block;
+  width: 100%;
+  padding: 8px 0%;
+  margin-right: 11px;
+  color: #9a9a9a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 
 }
