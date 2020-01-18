@@ -190,27 +190,42 @@ h5:after {
 
 /*banner styling starts here*/
 
-.banner { background-color: #a0c63f; }
+.banner { 
+  padding: 22px 0px;
+  background-color: #a0c63f;
+}
 
-.banner-img { position: relative; }
+.banner .wrapper { position: relative; }
 
 .banner li:not(:first-child) { display: none }
 
 h2 {
-  width: 42%;
+  width: 40%;
   color: #fff;
   position: absolute;
   top: 53px;
-  right: 3%;
+  right: 0  ;
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
 }
-
-.previous {
-  float: left;
+.previous,
+.next {
+  background-color: #a0c63f;
+  color: #fff;
+  font-size: 31px;
+}
+.previous { 
+  position: absolute;
+  top: 45%;
+  left: -25%;
 }
 
+.next {
+  position: absolute;
+  top:45%;
+  right: -25%;
+}
 /*banner styleing ends here*/
 
 /*business theme section start*/
@@ -391,8 +406,6 @@ input[type="submit"] {
   text-tranform: uppercase;
 }
 
-.footernav { background-color: #202020;  }
-
 .footernav a{
   margin: 1%;
   color: #fff;
@@ -401,9 +414,17 @@ input[type="submit"] {
 }
 
 .footernav li:last-child {
+  margin-top: 5px;
+  display: inline-block;
   float: right;
   font-size: 9px;
   color: #fff;
+}
+
+footer .wrapper + div { 
+  width:100%;
+  padding: 8px 0px;
+  background-color: #202020; 
 }
  /*=================================
   footer styling ends here
@@ -416,7 +437,8 @@ input[type="submit"] {
 
 .pullme:hover,
 .contact a:hover ,
-nav a:hover { color: #a0c63f; }
+nav a:hover,
+.footernav a:hover { color: #a0c63f; }
 
 .social-network .fa:hover{ color:#666; }
 
@@ -427,9 +449,73 @@ nav a:hover { color: #a0c63f; }
 }
 
 }
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
 
-
+nav li {
+  padding: 1% 0px 1% 22px;
+}
 
 }  
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px){
+
+p { font-size: 12px; }
+
+.wrapper { width: 70%; }
+
+.services, .footerOne{ flex-wrap: wrap; }
+
+.services li{ 
+  width: 50%;
+  margin-bottom:15px;
+}
+
+.portfolio li { width: 90%; }
+
+.advertisers-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advertisers-list li {
+    width: 22%;
+    margin: 0px 1% 5px 0px;
+}
+
+.next { right: -10%; }
+
+.previous { left:-10%; }
+
+.footerOne div {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+}
+
+@media only screen and (max-width: 767px){
+
+.wrapper { width :90%; }
+     
+.services li { width: 90%; }
+
+.advertisers-list li { width: 30%; }
+
+.footerOne div { width: 100%; }
+
+.previous { left: -6%;}
+
+.next { right:-6%; } 
+
+.portfolio figure{ width: 100%; }
+
+.portfolio-text {
+  width: 100%;
+  float: left;
+}
+
+.portfolio-text p{ width: 90%; }
+
+}
