@@ -134,15 +134,16 @@ header .wrapper {
   color: #000;
 }
 
-.pullme .fa{ 
+.pullme .fa { 
   color: #a0c63f; 
   font-size: 14px;
 }
 
 nav { margin-top: 20px; }
 
+nav li { padding: 1% 0px 1% 28px; }
+
 nav a{
-  padding: 1% 0px 1% 28px;
   color: #000;
   font-size: 10px;
   text-transform: uppercase;
@@ -174,6 +175,7 @@ h5 {
 }
 
 h6 {
+  padding-top: 2px;
   font-size: 12px;
   text-transform: uppercase;  
 } 
@@ -213,7 +215,10 @@ h2 {
 
 /*business theme section start*/
 
-.business-theme { margin-top: 30px; }
+.business-theme { 
+  padding-bottom: 12px;
+  margin-top: 30px;
+}
 
 h3 { 
   padding-bottom: 30px;
@@ -256,8 +261,10 @@ h3 {
 }
 
 .portfolio li { 
-  width: 48%;
-  margin-bottom: 25px;
+  width: 47%;
+  margin: 0px 2% 25px 0px;
+  border: 1px solid #f1f1f1;
+  background: #fff;  
 }
 
 .portfolio figure{ 
@@ -275,6 +282,7 @@ h3 {
 
 .portfolio-text a {
   padding: 2px 2%;
+  border: 1px solid transparent;
   margin: 8px 0px;
   color: #fff;
   background-color: #8db53e;
@@ -283,12 +291,30 @@ h3 {
 
 .portfolio-text p { font-size: 10px; }
 
-.portfolio-text p span { font-weight: bold; }
+.portfolio-text p span,
+footer p span { font-weight: bold; }
 /*portfolio styling end*/
 
 
 .advertisers-list { 
   display: flex;
+}
+
+.advertisers-list li { width: 17%; }
+
+.major-advertisers + a { 
+  width: 100%;
+  padding-bottom: 8px;
+  margin: 40px 0px 12px 0px;
+  position: relative;
+}
+
+.uparrow {
+  position: absolute;
+  right: 0;
+  background-color:#fff;
+  color: #a0c63f;
+  font-size: 24px;
 }
 /*=================================
   main styling ends here
@@ -298,12 +324,87 @@ h3 {
   footer styling starts here
 =================================*/ 
 
+footer { 
+  padding-top: 33px;
+  background-color: #fff;
+}
+.footerOne { display: flex; }
+
+.footerOne div { width: 25%; }
+
+.footerOne h6 { margin-bottom: 20px; }
+
+footer p,
+footer a{ 
+  font-size: 10px;
+}
+
+.contact .fa{ 
+  color: #ccc;
+  font-size: 14px;
+}
+
+.contact a,
+.Archives p{ 
+  width: 100%;
+  margin-bottom: 18px;
+  color: #666;
+}
+
+.Archives p { 
+  width: 80%;
+  padding-bottom: 7px;
+  border-bottom:2px dotted #ccc;
+}
+
+.about p {
+  width: 85%;
+  margin-bottom: 24px;
+}
+
+.about h6:last-of-type { margin-bottom: 13px; }
+
+.social-network .fa {
+  color: #ccc;
+  font-size: 16px;
+} 
+
+input[type="text"],
+input[type="email"] {
+  padding: 4px 2%;
+  margin-bottom: 10px;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fafafa;  
+}
 
 
+input[type="submit"] {
+  padding: 10px 3%;
+  border:none;
+  margin-top: 18px;
+  float: right;
+  background-color: #a0c63f;
+  color: #fff;
+  text-tranform: uppercase;
+}
 
+.footernav { background-color: #202020;  }
 
+.footernav a{
+  margin: 1%;
+  color: #fff;
+  font-size: 9px;  
+  text-transform: uppercase;  
+}
 
-
+.footernav li:last-child {
+  float: right;
+  font-size: 9px;
+  color: #fff;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
@@ -313,12 +414,19 @@ h3 {
 /*remove hover for below 1024px*/
 @media only screen and (min-width:1024px){
 
-.pullme:hover { color: #a0c63f; }
-
+.pullme:hover,
+.contact a:hover ,
 nav a:hover { color: #a0c63f; }
 
+.social-network .fa:hover{ color:#666; }
+
+.portfolio-text a:hover {
+  border: 1px solid #a0c63f;
+  background-color: #fff;
+  color: #a0c63f; 
 }
 
+}
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
