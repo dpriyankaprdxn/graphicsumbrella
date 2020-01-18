@@ -134,19 +134,36 @@ header .wrapper {
   color: #000;
 }
 
-.pullme .fa{ 
+.pullme .fa { 
   color: #a0c63f; 
   font-size: 14px;
 }
 
 nav { margin-top: 20px; }
 
+nav li { padding: 1% 0px 1% 28px; }
+
 nav a{
-  padding: 1% 0px 1% 28px;
   color: #000;
   font-size: 10px;
   text-transform: uppercase;
 }
+
+.toggle { 
+  width: 10%;
+  padding: 2px 2%;
+  border:1px solid #a0c63f;
+  display: none;
+  background:  #a0c63f;
+}
+
+.toggle span { 
+  padding: 4px 1%;
+  margin: 7px 2px;
+  display: block;
+  background: #ccc;
+}
+
 /*=================================
   Header styling ends here
 =================================*/  
@@ -174,6 +191,7 @@ h5 {
 }
 
 h6 {
+  padding-top: 2px;
   font-size: 12px;
   text-transform: uppercase;  
 } 
@@ -188,32 +206,50 @@ h5:after {
 
 /*banner styling starts here*/
 
-.banner { background-color: #a0c63f; }
+.banner { 
+  padding: 22px 0px;
+  background-color: #a0c63f;
+}
 
-.banner-img { position: relative; }
+.banner .wrapper { position: relative; }
 
 .banner li:not(:first-child) { display: none }
 
 h2 {
-  width: 42%;
+  width: 40%;
   color: #fff;
   position: absolute;
   top: 53px;
-  right: 3%;
+  right: 0  ;
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
 }
-
-.previous {
-  float: left;
+.previous,
+.next {
+  background-color: #a0c63f;
+  color: #fff;
+  font-size: 31px;
+}
+.previous { 
+  position: absolute;
+  top: 45%;
+  left: -25%;
 }
 
+.next {
+  position: absolute;
+  top:45%;
+  right: -25%;
+}
 /*banner styleing ends here*/
 
 /*business theme section start*/
 
-.business-theme { margin-top: 30px; }
+.business-theme { 
+  padding-bottom: 12px;
+  margin-top: 30px;
+}
 
 h3 { 
   padding-bottom: 30px;
@@ -256,8 +292,10 @@ h3 {
 }
 
 .portfolio li { 
-  width: 48%;
-  margin-bottom: 25px;
+  width: 47%;
+  margin: 0px 2% 25px 0px;
+  border: 1px solid #f1f1f1;
+  background: #fff;  
 }
 
 .portfolio figure{ 
@@ -275,6 +313,7 @@ h3 {
 
 .portfolio-text a {
   padding: 2px 2%;
+  border: 1px solid transparent;
   margin: 8px 0px;
   color: #fff;
   background-color: #8db53e;
@@ -283,12 +322,30 @@ h3 {
 
 .portfolio-text p { font-size: 10px; }
 
-.portfolio-text p span { font-weight: bold; }
+.portfolio-text p span,
+footer p span { font-weight: bold; }
 /*portfolio styling end*/
 
 
 .advertisers-list { 
   display: flex;
+}
+
+.advertisers-list li { width: 17%; }
+
+.major-advertisers + a { 
+  width: 100%;
+  padding-bottom: 8px;
+  margin: 40px 0px 12px 0px;
+  position: relative;
+}
+
+.uparrow {
+  position: absolute;
+  right: 0;
+  background-color:#fff;
+  color: #a0c63f;
+  font-size: 24px;
 }
 /*=================================
   main styling ends here
@@ -298,12 +355,93 @@ h3 {
   footer styling starts here
 =================================*/ 
 
+footer { 
+  padding-top: 33px;
+  background-color: #fff;
+}
+.footerOne { display: flex; }
+
+.footerOne div { width: 25%; }
+
+.footerOne h6 { margin-bottom: 20px; }
+
+footer p,
+footer a{ 
+  font-size: 10px;
+}
+
+.contact .fa{ 
+  color: #ccc;
+  font-size: 14px;
+}
+
+.contact a,
+.Archives p{ 
+  width: 100%;
+  margin-bottom: 18px;
+  color: #666;
+}
+
+.Archives p { 
+  width: 80%;
+  padding-bottom: 7px;
+  border-bottom:2px dotted #ccc;
+}
+
+.about p {
+  width: 85%;
+  margin-bottom: 24px;
+}
+
+.about h6:last-of-type { margin-bottom: 13px; }
+
+.social-network .fa {
+  color: #ccc;
+  font-size: 16px;
+} 
+
+input[type="text"],
+input[type="email"] {
+  padding: 4px 2%;
+  margin-bottom: 10px;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fafafa;  
+}
 
 
+input[type="submit"] {
+  padding: 10px 3%;
+  border:none;
+  margin-top: 18px;
+  float: right;
+  background-color: #a0c63f;
+  color: #fff;
+  text-tranform: uppercase;
+}
 
+.footernav a{
+  margin: 1%;
+  color: #fff;
+  font-size: 9px;  
+  text-transform: uppercase;  
+}
 
+.footernav li:last-child {
+  margin-top: 5px;
+  display: inline-block;
+  float: right;
+  font-size: 9px;
+  color: #fff;
+}
 
-
+footer .wrapper + div { 
+  width:100%;
+  padding: 8px 0px;
+  background-color: #202020; 
+}
  /*=================================
   footer styling ends here
 =================================*/ 
@@ -313,15 +451,146 @@ h3 {
 /*remove hover for below 1024px*/
 @media only screen and (min-width:1024px){
 
-.pullme:hover { color: #a0c63f; }
+.pullme:hover,
+.contact a:hover ,
+nav a:hover,
+.footernav a:hover { color: #a0c63f; }
 
-nav a:hover { color: #a0c63f; }
+.social-network .fa:hover{ color:#666; }
+
+.portfolio-text a:hover {
+  border: 1px solid #a0c63f;
+  background-color: #fff;
+  color: #a0c63f; 
+}
+
+}
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
+
+nav li {
+  padding: 1% 0px 1% 22px;
+}
+
+}  
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px){
+
+h2 { font-size: 18px; }  
+
+h3 { font-size: 23px; }  
+
+h4 { font-size: 22px; }
+
+h5 {font-size: 18px; }
+
+h6 { font-size: 14px; } 
+
+p { font-size: 12px; }
+
+.wrapper { width: 70%; }
+
+.services, .footerOne{ flex-wrap: wrap; }
+
+.services li{ 
+  width: 50%;
+  margin-bottom:15px;
+}
+
+.portfolio li { width: 90%; }
+
+.advertisers-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advertisers-list li {
+  width: 22%;
+  margin: 0px 1% 5px 0px;
+}
+
+.next { right: -10%; }
+
+.previous { left:-10%; }
+
+.footerOne div {
+  width: 50%;
+  margin-bottom: 10px;
+}
 
 }
 
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 767px){
+
+.wrapper { width :90%; }
+     
+.services li { width: 90%; }
+
+.advertisers-list li { width: 30%; }
+
+.footerOne div { width: 100%; }
+
+.previous { left: -6%;}
+
+.next { right:-6%; } 
+
+.portfolio figure{ width: 100%; }
+
+.portfolio-text {
+  width: 100%;
+  float: left;
+}
+
+.portfolio-text p{ width: 90%; }
+
+}
 
 
+@media only screen and (max-width: 540px){
 
-}  
+
+h2{
+  width: 60%;
+  top: 20%;
+  font-size: 14px;
+}
+.advertisers-list{ justify-content: space-around; }
+
+.advertisers-list li {
+  width: 38%;
+}
+
+.toggle { 
+  display:block;
+  float: right;
+}
+
+.toggle:hover + nav{
+display: block; 
+}
+
+nav { 
+  display: none;
+  width: 100%;
+  margin: 60px auto 0px auto;
+}
+
+nav li {
+margin: 0 auto; 
+  display: block;
+  width: 100%;
+}
+
+nav a {
+  display:block;
+  width: 100%;
+  padding: 8px 0%;
+  margin-right: 11px;
+  color: #9a9a9a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+}
