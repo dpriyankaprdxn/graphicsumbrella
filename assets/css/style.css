@@ -113,6 +113,7 @@ li {
   Header styling starts here
 =================================*/
 .menu {
+  width: 100%;
   position: relative;
 }
 
@@ -139,7 +140,10 @@ header .wrapper {
   font-size: 14px;
 }
 
-nav { margin-top: 20px; }
+nav { 
+  margin-top: 5px;
+  float: right;
+}
 
 nav li { padding: 1% 0px 1% 28px; }
 
@@ -151,15 +155,15 @@ nav a{
 
 .toggle { 
   width: 10%;
-  padding: 2px 2%;
+  padding: 5px 3%;
   border:1px solid #a0c63f;
   display: none;
   background:  #a0c63f;
 }
 
 .toggle span { 
-  padding: 4px 1%;
-  margin: 7px 2px;
+  padding: 1px 2%;
+  margin: 5px 2px;
   display: block;
   background: #ccc;
 }
@@ -498,7 +502,7 @@ p { font-size: 12px; }
   margin-bottom:15px;
 }
 
-.portfolio li { width: 90%; }
+.portfolio li { width: 100%; }
 
 .advertisers-list {
   display: flex;
@@ -524,8 +528,10 @@ p { font-size: 12px; }
 @media only screen and (max-width: 767px){
 
 .wrapper { width :90%; }
+
+.services, .footernav { flex-direction: column; }
      
-.services li { width: 90%; }
+.services li, .footernav li{ width: 100%; }
 
 .advertisers-list li { width: 30%; }
 
@@ -549,16 +555,18 @@ p { font-size: 12px; }
 
 @media only screen and (max-width: 540px){
 
-
 h2{
   width: 60%;
   top: 20%;
   font-size: 14px;
 }
-.advertisers-list{ justify-content: space-around; }
+.advertisers-list{ 
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .advertisers-list li {
-  width: 38%;
+  width: 100%;
 }
 
 .toggle { 
@@ -571,9 +579,10 @@ display: block;
 }
 
 nav { 
-  display: none;
   width: 100%;
-  margin: 60px auto 0px auto;
+  margin: 60px auto 0px -45%;
+  display: none;
+  float: none;
 }
 
 nav li {
@@ -583,14 +592,12 @@ margin: 0 auto;
 }
 
 nav a {
-  display:block;
   width: 100%;
   padding: 8px 0%;
   margin-right: 11px;
+  display:block;
   color: #9a9a9a;
   text-align: center;
   text-transform: uppercase;
 }
-
-
 }
